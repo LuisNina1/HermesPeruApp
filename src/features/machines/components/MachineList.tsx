@@ -12,6 +12,7 @@ interface MachineListProps {
 
 export function MachineList({ onEdit }: MachineListProps) {
 	const { data: machines, isLoading, isError } = useMachines();
+
 	const user = useAuthStore((s) => s.user);
 	if (isLoading) {
 		return (
@@ -25,10 +26,7 @@ export function MachineList({ onEdit }: MachineListProps) {
 		);
 	}
 
-	if (!machines || machines.length === 0) {
-		return <p className="text-text-muted py-8 text-center">No hay máquinas</p>;
-	}
-
+	// Solo obtienes las máquinas que pertenecen al usuario con su sucursal
 	const visible = (machines ?? []).filter((m) =>
 		user?.role === "supervisor" ? true : m.branchId === user?.branchId,
 	);

@@ -20,7 +20,8 @@ export function MachinesPage() {
 	};
 
 	const openEdit = (m: Machine) => {
-		setMachineToEdit(m), setOpen(true);
+		setMachineToEdit(m);
+		setOpen(true);
 	};
 
 	return (

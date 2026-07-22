@@ -12,7 +12,7 @@ export interface AuthUser {
 
 interface AuthState {
 	user: AuthUser | null;
-	setUsser: (user: AuthUser | null) => void;
+	setUser: (user: AuthUser | null) => void;
 }
 
 const MOCK_USER: AuthUser = {
@@ -25,5 +25,5 @@ const MOCK_USER: AuthUser = {
 
 export const useAuthStore = create<AuthState>((set) => ({
 	user: MOCK_USER,
-	setUsser: (user) => set({ user }),
+	setUser: (user) => set({ user }),
 }));
