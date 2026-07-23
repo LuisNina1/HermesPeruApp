@@ -1,8 +1,14 @@
 import { Wrench } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { useAuthStore } from "@/features/auth";
 import { navItems } from "./navItems";
 
 export function Sidebar() {
+	const user = useAuthStore((s) => s.user);
+	const visibleItems = navItems.filter(
+		(item) => !item.roles || (user != null && item.roles.includes(user.role)),
+	);
+
 	return (
 		<aside className="w-64 shrink-0 border-r border-border bg-surface flex flex-col">
 			<div className="flex items-center gap-3 px-5 h-16 border-b border-border">

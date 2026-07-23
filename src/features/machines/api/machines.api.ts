@@ -1,4 +1,3 @@
-import { promises } from "dns";
 import type { CreateMachineInput, Machine } from "../types/machine.types";
 
 const MOCK_MACHINES: Machine[] = [
@@ -83,21 +82,6 @@ export async function createMachine(
 
 // TEMPORAL PARA PRUEBAS
 //
-
-export interface BranchOption {
-	id: string;
-	name: string;
-}
-
-const MOCK_BRANCHES: BranchOption[] = [
-	{ id: "b1", name: "Sucursal Arequipa" },
-	{ id: "b2", name: "Sucursal Lima" },
-	{ id: "b3", name: "Sucursal Cusco" },
-];
-
-export async function getBranches(): Promise<BranchOption[]> {
-	return [...MOCK_BRANCHES];
-}
 
 export async function updateMachine(
 	id: string,

@@ -2,7 +2,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import type { CreateMachineInput } from "../types/machine.types";
 import {
 	createMachine,
-	getBranches,
 	getMachines,
 	getMachinesById,
 	updateMachine,
@@ -35,13 +34,6 @@ export function useCreateMachine() {
 		onSuccess: () => {
 			queryClient.invalidateQueries({ queryKey: machineKeys.all });
 		},
-	});
-}
-
-export function useBranchOptions() {
-	return useQuery({
-		queryKey: ["braches"],
-		queryFn: getBranches,
 	});
 }
 

@@ -1,9 +1,6 @@
+import { useBranchOptions } from "@/features/branches";
 import { Modal } from "@/shared/components/ui/Modal";
-import {
-	useBranchOptions,
-	useCreateMachine,
-	useUpdateMachine,
-} from "../api/machines.queries";
+import { useCreateMachine, useUpdateMachine } from "../api/machines.queries";
 import type { MachineFormValues } from "../schemas/machine.schema";
 import type { Machine } from "../types/machine.types";
 import { MachineForm } from "./MachineForm";

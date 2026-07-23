@@ -2,7 +2,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useAuthStore } from "@/features/auth";
-import { useBranchOptions } from "../api/machines.queries";
+import { useBranchOptions } from "@/features/branches";
 import {
 	type MachineFormValues,
 	machineSchema,
