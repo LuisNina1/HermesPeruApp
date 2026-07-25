@@ -22,7 +22,7 @@ export function Sidebar() {
 			</div>
 
 			<nav className="flex-1 px-3 py-4 space-y-1">
-				{navItems.map(({ label, path, icon: Icon }) => (
+				{visibleItems.map(({ label, path, icon: Icon }) => (
 					<NavLink
 						key={path}
 						to={path}

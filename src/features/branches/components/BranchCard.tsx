@@ -43,7 +43,7 @@ export function BranchCard({ branch, onEdit }: BranchCardProps) {
 								{branch.operationalCount} ok
 							</span>
 							{" · "}
-							<span className="accent-amber-400">
+							<span className="text-amber-400">
 								{branch.issueCount} con problemas
 							</span>
 						</p>
@@ -53,7 +53,8 @@ export function BranchCard({ branch, onEdit }: BranchCardProps) {
 					<Users size={16} className="text-text-muted shrink-0"></Users>
 					<div>
 						<p className="text-sm font-medium">
-							{branch.technicianCount} técnicos
+							{branch.technicianCount}{" "}
+							{branch.technicianCount > 1 ? "técnicos" : "tècnico"}
 						</p>
 						<p className="text-xs text-text-muted">asignados</p>
 					</div>
