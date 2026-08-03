@@ -4,6 +4,7 @@ import { BranchesPage } from "@/pages/BranchesPage";
 import { DashboardPage } from "@/pages/DashboardPage";
 import { MachinesPage } from "@/pages/MachinesPage";
 import { TechniciansPage } from "@/pages/TechniciansPage";
+import { WorkOrdersPage } from "@/pages/WorkOrderPage";
 import { ROUTES } from "./routePaths";
 
 export function AppRouter() {
@@ -14,6 +15,7 @@ export function AppRouter() {
 				<Route path={ROUTES.machines} element={<MachinesPage />} />
 				<Route path={ROUTES.branches} element={<BranchesPage />} />
 				<Route path={ROUTES.technicians} element={<TechniciansPage />} />
+				<Route path={ROUTES.workOrders} element={<WorkOrdersPage />} />
 
 				{/* Aquí irás sumando una ruta por feature */}
 			</Route>
