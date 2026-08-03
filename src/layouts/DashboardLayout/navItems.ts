@@ -5,6 +5,7 @@ import {
 	LayoutDashboard,
 	type LucideIcon,
 	Package,
+	Users,
 	Wrench,
 } from "lucide-react";
 import { ROUTES } from "@/app/router/routePaths";
@@ -29,4 +30,10 @@ export const navItems: NavItem[] = [
 	},
 	{ label: "Mantenimientos", path: ROUTES.maintenance, icon: Wrench },
 	{ label: "Repuestos", path: ROUTES.spareParts, icon: Package },
+	{
+		label: "Técnicos",
+		path: ROUTES.technicians,
+		icon: Users,
+		roles: ["supervisor"],
+	},
 ];

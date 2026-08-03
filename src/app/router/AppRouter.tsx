@@ -3,6 +3,7 @@ import { DashboardLayout } from "@/layouts/DashboardLayout";
 import { BranchesPage } from "@/pages/BranchesPage";
 import { DashboardPage } from "@/pages/DashboardPage";
 import { MachinesPage } from "@/pages/MachinesPage";
+import { TechniciansPage } from "@/pages/TechniciansPage";
 import { ROUTES } from "./routePaths";
 
 export function AppRouter() {
@@ -12,6 +13,7 @@ export function AppRouter() {
 				<Route path={ROUTES.dashboard} element={<DashboardPage />} />
 				<Route path={ROUTES.machines} element={<MachinesPage />} />
 				<Route path={ROUTES.branches} element={<BranchesPage />} />
+				<Route path={ROUTES.technicians} element={<TechniciansPage />} />
 
 				{/* Aquí irás sumando una ruta por feature */}
 			</Route>
